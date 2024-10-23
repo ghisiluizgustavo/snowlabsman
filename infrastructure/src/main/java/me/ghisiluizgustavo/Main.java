@@ -7,7 +7,6 @@ import me.ghisiluizgustavo.book.db.repository.BookRepository;
 import me.ghisiluizgustavo.customer.db.entity.CustomerEntity;
 import me.ghisiluizgustavo.customer.db.repository.CustomerRepository;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -36,8 +35,8 @@ public class Main {
             log.info("BookID: " + bookEntity.getId());
 
             var customer = new CustomerEntity();
-            customer.setName("John");
-            customer.setEmail("johndoe@mail.com");
+            customer.setName("Luiz Gustavo");
+            customer.setEmail("ghisiluizgustavo+snowmanlabs@mail.com");
             CustomerEntity customerEntity = customerRepository.save(customer);
             log.info("CustomerID: " + customerEntity.getId());
         };

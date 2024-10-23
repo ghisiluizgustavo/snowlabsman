@@ -6,6 +6,7 @@ import me.ghisiluizgustavo.book.model.Book;
 import me.ghisiluizgustavo.customer.gateway.CustomerPersistenceGateway;
 import me.ghisiluizgustavo.customer.model.Customer;
 import me.ghisiluizgustavo.rental.dto.IRentBooks;
+import me.ghisiluizgustavo.rental.gateway.RentalEmailNotificationGateway;
 import me.ghisiluizgustavo.rental.gateway.RentalNotificationGateway;
 import me.ghisiluizgustavo.rental.gateway.RentalPersistenceGateway;
 import me.ghisiluizgustavo.rental.model.Rental;
@@ -23,6 +24,7 @@ public class RentBooksUseCase {
     private final CustomerPersistenceGateway customerPersistenceGateway;
     private final BookPersistenceGateway bookPersistenceGateway;
     private final RentalNotificationGateway rentalNotificationGateway;
+    private final RentalEmailNotificationGateway rentalEmailNotificationGateway;
 
     public List<Rental> execute(IRentBooks rentBooks){
         Customer customer = customerPersistenceGateway.findById(rentBooks.customerId());
@@ -37,6 +39,10 @@ public class RentBooksUseCase {
 
         books.forEach(book -> bookPersistenceGateway.makeUnavailable(book.id().value()));
         rentalNotificationGateway.notifyRental(books, customer);
+        rentalEmailNotificationGateway.sendEmail(
+                customer,
+                "You successfully rented " + books.size() + " book(s)"
+        );
 
         return rentalsSaved;
     }
