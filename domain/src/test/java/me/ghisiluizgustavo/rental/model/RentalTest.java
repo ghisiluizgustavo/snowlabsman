@@ -9,8 +9,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,45 +17,45 @@ public class RentalTest {
 
     @Test
     public void shouldCreateRental() {
-        List<Book> books = List.of(new Book(
-                        new ID(UUID.randomUUID().toString()),
-                        new Isbn("978123123"),
-                        "Clean Code",
-                        "Uncle Bob",
-                        true
-                )
+        Book book = new Book(
+                new ID(UUID.randomUUID().toString()),
+                new Isbn("978123123"),
+                "Clean Code",
+                "Uncle Bob",
+                true
         );
+
         var rental = new Rental(
                 new ID(UUID.randomUUID().toString()),
                 new Customer(new ID(UUID.randomUUID().toString()), "John", "johndoe@mail.com"),
-                books,
+                book,
                 LocalDateTime.now(),
                 LocalDateTime.now()
         );
 
         assertNotNull(rental);
-        assertEquals("Clean Code", rental.books().get(0).name());
-        assertEquals("Uncle Bob", rental.books().get(0).author());
+        assertEquals("Clean Code", rental.book().name());
+        assertEquals("Uncle Bob", rental.book().author());
         assertEquals("John", rental.customer().name());
     }
 
     @Test
     public void shouldThrownExceptionWhenCustomerIsNull(){
-        List<Book> books = List.of(new Book(
-                        new ID(UUID.randomUUID().toString()),
-                        new Isbn("978123123"),
-                        "Clean Code",
-                        "Uncle Bob",
-                        true
-                )
+        Book book = new Book(
+                new ID(UUID.randomUUID().toString()),
+                new Isbn("978123123"),
+                "Clean Code",
+                "Uncle Bob",
+                true
         );
+
 
         IllegalArgumentException ex =
                 Assertions.assertThrows(IllegalArgumentException.class, () ->
                         new Rental(
                                 new ID(UUID.randomUUID().toString()),
                                 null,
-                                books,
+                                book,
                                 LocalDateTime.now(),
                                 LocalDateTime.now()
                         )
@@ -73,7 +71,7 @@ public class RentalTest {
                         new Rental(
                                 new ID(UUID.randomUUID().toString()),
                                 new Customer(new ID(UUID.randomUUID().toString()), "John", "johndoe@mail.com"),
-                                new ArrayList<>(),
+                                null,
                                 LocalDateTime.now(),
                                 LocalDateTime.now()
                         )
@@ -84,13 +82,12 @@ public class RentalTest {
 
     @Test
     public void shouldThrownExceptionWhenBooksIsNotAvailable(){
-        List<Book> books = List.of(new Book(
-                        new ID(UUID.randomUUID().toString()),
-                        new Isbn("978123123"),
-                        "Clean Code",
-                        "Uncle Bob",
-                        false
-                )
+        Book book = new Book(
+                new ID(UUID.randomUUID().toString()),
+                new Isbn("978123123"),
+                "Clean Code",
+                "Uncle Bob",
+                false
         );
 
         BookNotAvailableException ex =
@@ -98,7 +95,7 @@ public class RentalTest {
                         new Rental(
                                 new ID(UUID.randomUUID().toString()),
                                 new Customer(new ID(UUID.randomUUID().toString()), "John", "johndoe@mail.com"),
-                                books,
+                                book,
                                 LocalDateTime.now(),
                                 LocalDateTime.now()
                         )
