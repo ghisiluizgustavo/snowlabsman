@@ -13,4 +13,6 @@ public interface BookPersistenceGateway {
     void deleteBook(String id);
 
     Book updateBook(String id, Book book);
+
+    void makeUnavailable(String id);
 }

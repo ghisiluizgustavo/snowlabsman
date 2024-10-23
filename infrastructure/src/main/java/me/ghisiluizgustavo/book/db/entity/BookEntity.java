@@ -8,6 +8,11 @@ import lombok.Setter;
 import me.ghisiluizgustavo.ID;
 import me.ghisiluizgustavo.book.model.Book;
 import me.ghisiluizgustavo.book.model.Isbn;
+import me.ghisiluizgustavo.customer.db.entity.CustomerEntity;
+import me.ghisiluizgustavo.rental.db.entity.RentalEntity;
+import me.ghisiluizgustavo.rental.model.Rental;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,6 +29,9 @@ public class BookEntity {
     private String name;
     private String author;
     private Boolean available;
+
+    @OneToMany(mappedBy = "book")
+    private List<RentalEntity> rentals;
 
     public BookEntity(Book book) {
         this.isbn = book.isbn().value();

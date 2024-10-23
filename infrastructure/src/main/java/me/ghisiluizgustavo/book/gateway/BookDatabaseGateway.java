@@ -48,5 +48,13 @@ public class BookDatabaseGateway implements BookPersistenceGateway {
         }).orElseThrow(() -> new BookNotFoundException("Book with id: " + id + " was not found"));
     }
 
+    @Override
+    public void makeUnavailable(String id) {
+        bookRepository.findById(id).map(book -> {
+            book.setAvailable(false);
+            return bookRepository.save(book);
+        }).orElseThrow(() -> new BookNotFoundException("Book with id: " + id + " was not found"));
+    }
+
 
 }

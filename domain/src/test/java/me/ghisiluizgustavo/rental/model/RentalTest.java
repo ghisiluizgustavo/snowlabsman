@@ -8,6 +8,7 @@ import me.ghisiluizgustavo.rental.exception.BookNotAvailableException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -28,8 +29,10 @@ public class RentalTest {
         );
         var rental = new Rental(
                 new ID(UUID.randomUUID().toString()),
-                new Customer(new ID(UUID.randomUUID().toString()), "John"),
-                books
+                new Customer(new ID(UUID.randomUUID().toString()), "John", "johndoe@mail.com"),
+                books,
+                LocalDateTime.now(),
+                LocalDateTime.now()
         );
 
         assertNotNull(rental);
@@ -54,7 +57,9 @@ public class RentalTest {
                         new Rental(
                                 new ID(UUID.randomUUID().toString()),
                                 null,
-                                books
+                                books,
+                                LocalDateTime.now(),
+                                LocalDateTime.now()
                         )
                 );
 
@@ -67,8 +72,10 @@ public class RentalTest {
                 Assertions.assertThrows(IllegalArgumentException.class, () ->
                         new Rental(
                                 new ID(UUID.randomUUID().toString()),
-                                new Customer(new ID(UUID.randomUUID().toString()), "John"),
-                                new ArrayList<>()
+                                new Customer(new ID(UUID.randomUUID().toString()), "John", "johndoe@mail.com"),
+                                new ArrayList<>(),
+                                LocalDateTime.now(),
+                                LocalDateTime.now()
                         )
                 );
 
@@ -90,8 +97,10 @@ public class RentalTest {
                 Assertions.assertThrows(BookNotAvailableException.class, () ->
                         new Rental(
                                 new ID(UUID.randomUUID().toString()),
-                                new Customer(new ID(UUID.randomUUID().toString()), "John"),
-                                books
+                                new Customer(new ID(UUID.randomUUID().toString()), "John", "johndoe@mail.com"),
+                                books,
+                                LocalDateTime.now(),
+                                LocalDateTime.now()
                         )
                 );
 

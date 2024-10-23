@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class MessageQueueingPersistenceGateway implements BookNotificationGateway {
+public class BookMessageQueueingGateway implements BookNotificationGateway {
 
     private final ApplicationEventPublisher eventPublisher;
 

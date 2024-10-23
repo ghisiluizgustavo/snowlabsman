@@ -1,18 +1,24 @@
 package me.ghisiluizgustavo;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import me.ghisiluizgustavo.book.db.entity.BookEntity;
 import me.ghisiluizgustavo.book.db.repository.BookRepository;
+import me.ghisiluizgustavo.customer.db.entity.CustomerEntity;
+import me.ghisiluizgustavo.customer.db.repository.CustomerRepository;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+@Slf4j
 @SpringBootApplication
+@RequiredArgsConstructor
 public class Main {
 
-    @Autowired
-    private BookRepository bookRepository;
+    private final BookRepository bookRepository;
+    private final CustomerRepository customerRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
@@ -26,7 +32,14 @@ public class Main {
             book.setAuthor("Uncle Bob");
             book.setIsbn("9780132350884");
             book.setAvailable(true);
-            bookRepository.save(book);
+            BookEntity bookEntity = bookRepository.save(book);
+            log.info("BookID: " + bookEntity.getId());
+
+            var customer = new CustomerEntity();
+            customer.setName("John");
+            customer.setEmail("johndoe@mail.com");
+            CustomerEntity customerEntity = customerRepository.save(customer);
+            log.info("CustomerID: " + customerEntity.getId());
         };
     }
 }
