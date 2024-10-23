@@ -2,9 +2,9 @@ package me.ghisiluizgustavo.book;
 
 import lombok.RequiredArgsConstructor;
 import me.ghisiluizgustavo.ID;
-import me.ghisiluizgustavo.book.dto.IBookCreate;
 import me.ghisiluizgustavo.book.dto.IBookUpdate;
-import me.ghisiluizgustavo.book.gateway.BookGateway;
+import me.ghisiluizgustavo.book.gateway.BookNotificationGateway;
+import me.ghisiluizgustavo.book.gateway.BookPersistenceGateway;
 import me.ghisiluizgustavo.book.model.Book;
 import me.ghisiluizgustavo.book.model.Isbn;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,8 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class UpdateBookUseCase {
 
-    private final BookGateway bookGateway;
+    private final BookPersistenceGateway bookPersistenceGateway;
+    private final BookNotificationGateway bookNotificationGateway;
 
     public Book execute(String id, IBookUpdate bookUpdate){
         var book = new Book(
@@ -24,7 +25,11 @@ public class UpdateBookUseCase {
                 bookUpdate.available()
         );
 
-        return bookGateway.updateBook(id, book);
+        Book savedBook = bookPersistenceGateway.updateBook(id, book);
+
+        bookNotificationGateway.notifyUpdatedBook(savedBook);
+
+        return savedBook;
     }
 
 }

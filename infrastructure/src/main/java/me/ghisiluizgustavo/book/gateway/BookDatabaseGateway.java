@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class BookDatabaseGateway implements BookGateway {
+public class BookDatabaseGateway implements BookPersistenceGateway {
 
     private final BookRepository bookRepository;
 
     @Override
-    public Book create(Book book){
+    public Book save(Book book){
         return bookRepository.save(new BookEntity(book)).toBook();
     }
 

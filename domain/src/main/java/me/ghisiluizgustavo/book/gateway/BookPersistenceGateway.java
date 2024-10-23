@@ -4,9 +4,9 @@ import me.ghisiluizgustavo.book.model.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-public interface BookGateway {
+public interface BookPersistenceGateway {
 
-    Book create(Book book);
+    Book save(Book book);
     Book findById(String id);
     Page<Book> findlAllBooks(Pageable pageable);
 

@@ -1,7 +1,7 @@
 package me.ghisiluizgustavo.book;
 
 import lombok.RequiredArgsConstructor;
-import me.ghisiluizgustavo.book.gateway.BookGateway;
+import me.ghisiluizgustavo.book.gateway.BookPersistenceGateway;
 import me.ghisiluizgustavo.book.model.Book;
 import org.springframework.stereotype.Component;
 
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class FindBookByIdUseCase {
 
-    private final BookGateway bookGateway;
+    private final BookPersistenceGateway bookPersistenceGateway;
 
     public Book execute(String id){
-        return bookGateway.findById(id);
+        return bookPersistenceGateway.findById(id);
     }
 
 }
