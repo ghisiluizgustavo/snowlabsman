@@ -16,10 +16,6 @@ public record Rental(ID id, Customer customer, List<Book> books) {
             throw new IllegalArgumentException("To rent books is needed at least one book");
         }
 
-        checkBooksAvailability();
-    }
-
-    private void checkBooksAvailability() {
         books.stream()
                 .filter(book -> !book.isAvailable())
                 .findAny()
