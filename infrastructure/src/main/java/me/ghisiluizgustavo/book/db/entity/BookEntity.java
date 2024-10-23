@@ -29,6 +29,7 @@ public class BookEntity {
         this.isbn = book.isbn().value();
         this.name = book.name();
         this.available = book.available();
+        this.author = book.author();
     }
 
 
