@@ -2,3 +2,5 @@ version: "3"
 services:
   snowmanlab-app:
     image: ghisiluizgustavo/snowmanlabs
+    ports:
+      - "8080:8080"
