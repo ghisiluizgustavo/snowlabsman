@@ -93,6 +93,7 @@
 					<configuration>
 						<source>21</source>
 						<target>21</target>
+						<compilerVersion>21</compilerVersion>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -103,8 +104,21 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>me.ghisiluizgustavo.Main.java</mainClass>
+					<finalName>app</finalName>
+					<mainClass>me.ghisiluizgustavo.infrastructure.Main.java</mainClass>
+					<outputDirectory>../target</outputDirectory>
 				</configuration>
+				<executions>
+					<execution>
+						<id>repackage</id>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
