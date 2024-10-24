@@ -1,6 +1,6 @@
 package me.ghisiluizgustavo.customer.dto;
 
-import me.ghisiluizgustavo.customer.model.Customer;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
 
 public record CustomerResponseDTO(
         String id,

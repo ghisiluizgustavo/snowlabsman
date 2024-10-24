@@ -5,11 +5,8 @@ import lombok.RequiredArgsConstructor;
 import me.ghisiluizgustavo.rental.RentBooksUseCase;
 import me.ghisiluizgustavo.rental.dto.RentBooksDTO;
 import me.ghisiluizgustavo.rental.dto.RentalBookResponseDTO;
-import me.ghisiluizgustavo.rental.model.Rental;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor

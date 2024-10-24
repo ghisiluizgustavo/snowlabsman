@@ -2,9 +2,9 @@ package me.ghisiluizgustavo.rental.gateway;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.ghisiluizgustavo.book.event.model.StatusEventBook;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.customer.model.Customer;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
+import me.ghisiluizgustavo.domain.rental.gateway.RentalNotificationGateway;
 import me.ghisiluizgustavo.rental.event.model.RentalEvent;
 import me.ghisiluizgustavo.rental.event.model.StatusEventRental;
 import org.springframework.context.ApplicationEventPublisher;

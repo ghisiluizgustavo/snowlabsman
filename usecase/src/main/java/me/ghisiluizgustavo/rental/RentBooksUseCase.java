@@ -1,15 +1,15 @@
 package me.ghisiluizgustavo.rental;
 
 import lombok.RequiredArgsConstructor;
-import me.ghisiluizgustavo.book.gateway.BookPersistenceGateway;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.customer.gateway.CustomerPersistenceGateway;
-import me.ghisiluizgustavo.customer.model.Customer;
+import me.ghisiluizgustavo.domain.book.gateway.BookPersistenceGateway;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.customer.gateway.CustomerPersistenceGateway;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
 import me.ghisiluizgustavo.rental.dto.IRentBooks;
-import me.ghisiluizgustavo.rental.gateway.RentalEmailNotificationGateway;
-import me.ghisiluizgustavo.rental.gateway.RentalNotificationGateway;
-import me.ghisiluizgustavo.rental.gateway.RentalPersistenceGateway;
-import me.ghisiluizgustavo.rental.model.Rental;
+import me.ghisiluizgustavo.domain.rental.gateway.RentalEmailNotificationGateway;
+import me.ghisiluizgustavo.domain.rental.gateway.RentalNotificationGateway;
+import me.ghisiluizgustavo.domain.rental.gateway.RentalPersistenceGateway;
+import me.ghisiluizgustavo.domain.rental.model.Rental;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;

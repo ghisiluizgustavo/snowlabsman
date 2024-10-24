@@ -4,7 +4,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.ghisiluizgustavo.book.event.model.BookEvent;
 import me.ghisiluizgustavo.book.event.model.StatusEventBook;
-import me.ghisiluizgustavo.book.model.Book;
+import me.ghisiluizgustavo.domain.book.gateway.BookNotificationGateway;
+import me.ghisiluizgustavo.domain.book.model.Book;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package me.ghisiluizgustavo.customer.exception;
+package me.ghisiluizgustavo.domain.customer.exception;
 
 public class CustomerNotFoundException extends RuntimeException {
 

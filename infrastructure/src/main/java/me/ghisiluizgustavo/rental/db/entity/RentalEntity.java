@@ -5,17 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.ghisiluizgustavo.ID;
+import me.ghisiluizgustavo.domain.ID;
 import me.ghisiluizgustavo.book.db.entity.BookEntity;
-import me.ghisiluizgustavo.book.dto.BookResponseDTO;
-import me.ghisiluizgustavo.book.model.Book;
 import me.ghisiluizgustavo.customer.db.entity.CustomerEntity;
-import me.ghisiluizgustavo.customer.model.Customer;
-import me.ghisiluizgustavo.rental.model.Rental;
+import me.ghisiluizgustavo.domain.rental.model.Rental;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "rental")

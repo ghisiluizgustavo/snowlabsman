@@ -1,13 +1,11 @@
 package me.ghisiluizgustavo.customer.gateway;
 
 import lombok.RequiredArgsConstructor;
-import me.ghisiluizgustavo.book.db.entity.BookEntity;
-import me.ghisiluizgustavo.book.exception.BookNotFoundException;
 import me.ghisiluizgustavo.customer.db.entity.CustomerEntity;
 import me.ghisiluizgustavo.customer.db.repository.CustomerRepository;
-import me.ghisiluizgustavo.customer.exception.CustomerNotFoundException;
-import me.ghisiluizgustavo.customer.model.Customer;
-import me.ghisiluizgustavo.rental.model.Rental;
+import me.ghisiluizgustavo.domain.customer.exception.CustomerNotFoundException;
+import me.ghisiluizgustavo.domain.customer.gateway.CustomerPersistenceGateway;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
 import org.springframework.stereotype.Component;
 
 @Component

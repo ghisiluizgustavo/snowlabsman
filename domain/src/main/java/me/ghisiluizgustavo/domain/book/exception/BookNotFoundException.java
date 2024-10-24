@@ -1,4 +1,4 @@
-package me.ghisiluizgustavo.book.exception;
+package me.ghisiluizgustavo.domain.book.exception;
 
 public class BookNotFoundException extends RuntimeException {
 

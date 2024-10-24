@@ -7,11 +7,10 @@ import lombok.Setter;
 import me.ghisiluizgustavo.book.dto.BookResponseDTO;
 
 import me.ghisiluizgustavo.customer.dto.CustomerResponseDTO;
-import me.ghisiluizgustavo.rental.model.Rental;
+import me.ghisiluizgustavo.domain.rental.model.Rental;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @NoArgsConstructor

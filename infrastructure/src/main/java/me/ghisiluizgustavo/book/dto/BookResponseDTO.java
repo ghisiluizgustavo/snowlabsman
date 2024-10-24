@@ -1,6 +1,6 @@
 package me.ghisiluizgustavo.book.dto;
 
-import me.ghisiluizgustavo.book.model.Book;
+import me.ghisiluizgustavo.domain.book.model.Book;
 
 public record BookResponseDTO(
         String id,

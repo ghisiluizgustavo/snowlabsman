@@ -1,10 +1,11 @@
 package me.ghisiluizgustavo.rental.model;
 
-import me.ghisiluizgustavo.ID;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.book.model.Isbn;
-import me.ghisiluizgustavo.customer.model.Customer;
-import me.ghisiluizgustavo.rental.exception.BookNotAvailableException;
+import me.ghisiluizgustavo.domain.ID;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.book.model.Isbn;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
+import me.ghisiluizgustavo.domain.rental.exception.BookNotAvailableException;
+import me.ghisiluizgustavo.domain.rental.model.Rental;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

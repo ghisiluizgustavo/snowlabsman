@@ -1,4 +1,4 @@
-package me.ghisiluizgustavo.rental.exception;
+package me.ghisiluizgustavo.domain.rental.exception;
 
 public class BookNotAvailableException extends RuntimeException {
 

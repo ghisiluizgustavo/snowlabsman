@@ -5,8 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.ghisiluizgustavo.ID;
-import me.ghisiluizgustavo.customer.model.Customer;
+import me.ghisiluizgustavo.domain.ID;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
 import me.ghisiluizgustavo.rental.db.entity.RentalEntity;
 
 import java.util.List;

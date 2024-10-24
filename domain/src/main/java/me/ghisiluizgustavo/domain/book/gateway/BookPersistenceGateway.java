@@ -1,6 +1,6 @@
-package me.ghisiluizgustavo.book.gateway;
+package me.ghisiluizgustavo.domain.book.gateway;
 
-import me.ghisiluizgustavo.book.model.Book;
+import me.ghisiluizgustavo.domain.book.model.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

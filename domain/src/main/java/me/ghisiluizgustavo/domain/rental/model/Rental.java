@@ -1,12 +1,11 @@
-package me.ghisiluizgustavo.rental.model;
+package me.ghisiluizgustavo.domain.rental.model;
 
-import me.ghisiluizgustavo.ID;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.customer.model.Customer;
-import me.ghisiluizgustavo.rental.exception.BookNotAvailableException;
+import me.ghisiluizgustavo.domain.ID;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
+import me.ghisiluizgustavo.domain.rental.exception.BookNotAvailableException;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 public record Rental(ID id, Customer customer, Book book, LocalDateTime rentalDate, LocalDateTime devolutionDate) {
     public Rental {

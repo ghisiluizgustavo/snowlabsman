@@ -1,7 +1,7 @@
 package me.ghisiluizgustavo.book.event.model;
 
 import lombok.Getter;
-import me.ghisiluizgustavo.book.model.Book;
+import me.ghisiluizgustavo.domain.book.model.Book;
 import org.springframework.context.ApplicationEvent;
 
 @Getter

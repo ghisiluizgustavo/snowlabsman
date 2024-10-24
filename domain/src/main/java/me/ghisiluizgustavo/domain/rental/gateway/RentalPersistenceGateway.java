@@ -1,6 +1,6 @@
-package me.ghisiluizgustavo.rental.gateway;
+package me.ghisiluizgustavo.domain.rental.gateway;
 
-import me.ghisiluizgustavo.rental.model.Rental;
+import me.ghisiluizgustavo.domain.rental.model.Rental;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package me.ghisiluizgustavo.customer.model;
+package me.ghisiluizgustavo.domain.customer.model;
 
-import me.ghisiluizgustavo.ID;
+import me.ghisiluizgustavo.domain.ID;
 import org.apache.logging.log4j.util.Strings;
 
 public record Customer(ID id, String name, String email) {

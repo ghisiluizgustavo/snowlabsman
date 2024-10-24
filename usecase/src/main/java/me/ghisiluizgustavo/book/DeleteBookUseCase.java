@@ -1,8 +1,8 @@
 package me.ghisiluizgustavo.book;
 
 import lombok.RequiredArgsConstructor;
-import me.ghisiluizgustavo.book.gateway.BookNotificationGateway;
-import me.ghisiluizgustavo.book.gateway.BookPersistenceGateway;
+import me.ghisiluizgustavo.domain.book.gateway.BookNotificationGateway;
+import me.ghisiluizgustavo.domain.book.gateway.BookPersistenceGateway;
 import org.springframework.stereotype.Component;
 
 @Component

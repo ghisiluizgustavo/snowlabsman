@@ -1,4 +1,4 @@
-package me.ghisiluizgustavo.book.model;
+package me.ghisiluizgustavo.domain.book.model;
 
 public record Isbn(String value) {
     public Isbn{

@@ -1,6 +1,8 @@
 package me.ghisiluizgustavo.book.model;
 
-import me.ghisiluizgustavo.ID;
+import me.ghisiluizgustavo.domain.ID;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.book.model.Isbn;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

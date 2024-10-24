@@ -1,8 +1,8 @@
 package me.ghisiluizgustavo.rental.event.model;
 
 import lombok.Getter;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.customer.model.Customer;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
 import org.springframework.context.ApplicationEvent;
 
 import java.util.List;

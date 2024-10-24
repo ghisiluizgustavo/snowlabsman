@@ -1,6 +1,6 @@
-package me.ghisiluizgustavo.book.model;
+package me.ghisiluizgustavo.domain.book.model;
 
-import me.ghisiluizgustavo.ID;
+import me.ghisiluizgustavo.domain.ID;
 import org.apache.logging.log4j.util.Strings;
 
 public record Book(ID id, Isbn isbn, String name, String author, Boolean available) {

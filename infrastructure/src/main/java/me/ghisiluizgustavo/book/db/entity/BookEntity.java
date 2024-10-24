@@ -5,9 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.ghisiluizgustavo.ID;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.book.model.Isbn;
+import me.ghisiluizgustavo.domain.ID;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.book.model.Isbn;
 import me.ghisiluizgustavo.rental.db.entity.RentalEntity;
 
 import java.util.List;

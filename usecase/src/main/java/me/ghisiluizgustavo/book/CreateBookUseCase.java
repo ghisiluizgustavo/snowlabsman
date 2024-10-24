@@ -2,10 +2,10 @@ package me.ghisiluizgustavo.book;
 
 import me.ghisiluizgustavo.book.dto.IBookCreate;
 import lombok.RequiredArgsConstructor;
-import me.ghisiluizgustavo.book.gateway.BookNotificationGateway;
-import me.ghisiluizgustavo.book.gateway.BookPersistenceGateway;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.book.model.Isbn;
+import me.ghisiluizgustavo.domain.book.gateway.BookNotificationGateway;
+import me.ghisiluizgustavo.domain.book.gateway.BookPersistenceGateway;
+import me.ghisiluizgustavo.domain.book.model.Book;
+import me.ghisiluizgustavo.domain.book.model.Isbn;
 import org.springframework.stereotype.Component;
 
 @Component

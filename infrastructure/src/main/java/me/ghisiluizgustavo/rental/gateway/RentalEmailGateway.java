@@ -2,8 +2,8 @@ package me.ghisiluizgustavo.rental.gateway;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.ghisiluizgustavo.book.model.Book;
-import me.ghisiluizgustavo.customer.model.Customer;
+import me.ghisiluizgustavo.domain.customer.model.Customer;
+import me.ghisiluizgustavo.domain.rental.gateway.RentalEmailNotificationGateway;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
