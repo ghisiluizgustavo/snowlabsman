@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "33aa03be-f21a-48cd-8fda-c32f049f542c",
+		"name": "SnowmanLabs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12279520"
+	},
+	"item": [
+		{
+			"name": "Create a book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"978123456\",\r\n    \"name\": \"Clean Arch\",\r\n    \"author\": \"Uncle Bob\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rent books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"4bc873af-67dd-4e1e-b20e-771c4e837d40\",\r\n    \"booksIds\": [\r\n        \"0f85d91d-a21d-401f-b5ba-7029712967f4\",\r\n        \"8296475a-eb24-4b2d-b5c9-509e57219288\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/rental",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"rental"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"978123456\",\r\n    \"name\": \"Clean Arch\",\r\n    \"author\": \"Robert Martin (Uncle Bob)\",\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book/0f85d91d-a21d-401f-b5ba-7029712967f4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"0f85d91d-a21d-401f-b5ba-7029712967f4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find a book by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book/8e13087a-5432-4eb5-acab-aa3aecd3b003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"8e13087a-5432-4eb5-acab-aa3aecd3b003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book/bbf521c5-97f5-4607-8f10-62019268568b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"bbf521c5-97f5-4607-8f10-62019268568b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
