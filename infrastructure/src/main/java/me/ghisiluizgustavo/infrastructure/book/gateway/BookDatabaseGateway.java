@@ -45,6 +45,7 @@ public class BookDatabaseGateway implements BookPersistenceGateway {
             bookEntity.setIsbn(book.isbn().value());
             bookEntity.setName(book.name());
             bookEntity.setAuthor(book.author());
+            bookEntity.setAvailable(book.available());
             return bookRepository.save(bookEntity).toBook();
         }).orElseThrow(() -> new BookNotFoundException("Book with id: " + id + " was not found"));
     }
