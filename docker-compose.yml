@@ -1,0 +1,5 @@
+version: "3"
+services:
+  snowmanlab-app:
+    build: .
+    image: snowmanlabs:1.0
